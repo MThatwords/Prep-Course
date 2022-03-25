@@ -43,7 +43,19 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-  
+  var mayus = "";
+  var minus = "";
+  for (const letra of s)   {
+    if (letra == letra.toUpperCase()){
+      mayus= mayus + letra
+    }
+  }
+  for (const letra of s){
+    if (letra == letra.toLowerCase()){
+      minus = minus + letra
+  }
+}
+return mayus + minus
 }
 
 
@@ -53,6 +65,17 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var temp = "";
+  var array = [];
+  for (var i = str.length-1; i>=0; i--){
+    temp+=str[i];
+  }
+  console.log(temp);
+  array = temp.split(" ");
+  var mirror = array.reverse()
+
+console.log(mirror);
+  return mirror.join(" ")
 } 
 
 
@@ -61,6 +84,16 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var mirror = numero.toString().split("").reverse().join("")
+  console.log(mirror)
+  console.log(numero)
+
+  if(numero == mirror){
+    return "Es capicua" 
+  }else {
+    return "No es capicua"
+  } 
+
 }
 
 
@@ -68,6 +101,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var str = cadena.split("").filter(n => {return n != "a" && n!= "b" && n!="c"}   ).join("")
+  return str
 }
 
 
@@ -75,7 +110,9 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  
 }
+console.log(sortArray(["pera", "manzana", "alcaucil", "papa"]));
 
 
 function buscoInterseccion(arreglo1, arreglo2){
