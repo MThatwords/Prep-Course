@@ -27,17 +27,15 @@ function numberOfCharacters(string) {
   //Escribe tu código aquí
   var letras = {}
   for (var char of string){
+    letras[char] = 0
     for(let i = 0;i<string.length;i++){
-      if (char!=string[i]) {
-        letras[i] = char
-    }else{
-      
+    if (char==string[i]){
+      letras[char]+=1
     }
   }
 }
   return letras
 }
-console.log(numberOfCharacters("adsjfdsfsfjsdjfhacabcsbajda"));
 
 
 function capToFront(s) {
@@ -45,6 +43,7 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  
 }
 
 
