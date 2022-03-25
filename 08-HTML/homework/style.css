@@ -1,0 +1,26 @@
+body{
+    align-items:center;
+    background-image: url("https://i.pinimg.com/originals/89/11/ff/8911ff72f741ec73f6606d164e553491.jpg");
+}
+h1 {
+  color: #70a;
+}
+
+img {
+  width: 400px;
+}
+
+#thirdDiv {
+  height: 600px;
+  width: 500px;
+  padding: 50px;
+  border: 1px solid;
+}
+#spanId {
+  font-size: 18px;
+  margin: 50px;
+}
+
+div {
+    align-content: center;
+}
